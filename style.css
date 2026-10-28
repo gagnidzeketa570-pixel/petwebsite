@@ -1,0 +1,301 @@
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: lightpink;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.btnDiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.greet {
+    font-size: 18px;
+    color: white;
+}
+
+.btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.loginBtn {
+    background-color: steelblue;
+}
+
+.logoutBtn {
+    background-color: crimson;
+    display: none;
+}
+
+
+/* MAIN */
+
+main {
+    width: 100%;
+}
+
+
+/* FIRST SECTION */
+
+.hero {
+    width: 100%;
+    height: 500px;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 105, 150, 0.25),
+            rgba(255, 105, 150, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1600");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBox {
+    width: 400px;
+    padding: 30px;
+
+    background-color: rgba(255, 192, 203, 0.85);
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+.heroBox h2 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 25px;
+}
+
+.heroBox p {
+    font-size: 14px;
+    color: black;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contactBtn {
+    background-color: #ff3366;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* SECOND SECTION */
+
+.animals {
+    width: 100%;
+    min-height: 350px;
+
+    background-color: #ffd6df;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 20px;
+    padding: 40px;
+}
+
+.animal img {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* LOGIN FORM */
+
+.formDiv {
+    width: 300px;
+
+    position: absolute;
+    top: 15%;
+    left: 45%;
+
+    padding: 30px;
+
+    background-color: antiquewhite;
+    border-radius: 14px;
+
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 14px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.emailLogin {
+    background-color: rgba(51, 51, 175, 0.651);
+    margin: 10px 0;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    min-height: 220px;
+
+    background-color: #666666;
+    color: white;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    gap: 30px;
+    padding: 30px;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footerAbout {
+    width: 350px;
+}
+
+.footerAbout h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footerAbout p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.footerContact h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footerContact p {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.darkBtn {
+    background-color: #c7b9b9;
+    margin-top: 10px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        padding: 20px;
+
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .heroBox {
+        width: 90%;
+    }
+
+    .animals {
+        flex-wrap: wrap;
+    }
+
+    .animal img {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footerAbout {
+        width: 100%;
+    }
+
+    .formDiv {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
